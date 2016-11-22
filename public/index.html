@@ -52,6 +52,8 @@
     <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="/css/app.css">
     <script src="https://www.google.com/recaptcha/api.js?onload=vcRecapthaApiLoaded&render=explicit" async defer></script>
@@ -62,10 +64,13 @@
 </head>
 
 <body ng-controller="mainController">
+    <div class="field"></div>
+
     <div class="main-block">
         <div class="logotype-block">
             <p>
                 <a href="https://shift.io/"><img src="/img/logo.png" alt="Shift"></a>
+                <h1>Shift Faucet</h1>
             </p>
         </div>
         <div class="error fx-fade-down" ng-show="error">
@@ -75,7 +80,7 @@
             <p><strong>{{amount}} SHIFT sent, Transaction ID: </strong>{{txId}}</p>
         </div>
         <div class="available-block">
-            <h5>AVAILABLE : {{available || 0}} SHIFT</h5>
+            <h5>AVAILABLE : <a href="https://explorer.shift.io/address/4892902538529891985L">{{available || 0}} SHIFT</a></h5>
         </div>
         <!-- <div class="testnet-notice" ng-if="network == 'testnet'">
             <p>This faucet is currently running on a testnet.
@@ -83,18 +88,20 @@
         </div> -->
         <div class="send-form">
             <form class="form">
-                <input type="text" ng-model="address" class="input" placeholder="Please enter your Shift address to receive {{amount || 0}} SHIFT for free">
-                <p class="msg">Don't have a Shift address? Use our <a href="https://node.shiftnrg.online/" target="_blank">web client</a> to create one!</p>
+                <input type="text" ng-model="address" class="input" placeholder="Enter your address to receive {{amount || 0}} SHIFT">
+                <p class="msg">Don't have a Shift address? <a href="https://node.shiftnrg.online/" target="_blank">Create one</a> now!</p>
                 <br>
                 <div vc-recaptcha ng-model="captcha" lang="en" class="g-recaptcha" key="'6Lf28B8TAAAAAF7oppGtBH1-Rx7fy0Qwqy7HjDOa'"></div>
                 <br>
                 <input type="submit" class="button" value="Receive my free SHIFT" ng-click="send()">
             </form>
         </div>
+       <p class="msg">Faucet address: <a href="https://explorer.shift.io/address/{{donation_address}}" target="_blank">{{donation_address || 'Unavailable'}}</a></p>
     </div>
-    <div class="footer">Faucet address:
-        <a href="https://explorer.shift.io/address/{{donation_address}}" target="_blank">{{donation_address || 'Unavailable'}}</a>
+    <div class="footer">
+
     </div>
+    <div class="stars"></div>
 </body>
 
 </html>
