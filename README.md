@@ -39,7 +39,7 @@ Open `config.json` and complete the following details.
   ```js
   "Shift" : {
       "host" : "127.0.0.1", // <-- Server IP/hostname
-      "port" : 7000,        // <-- 7000 for testnet, 8000 for mainnet
+      "port" : 9305,        // <-- 7000 for testnet, 8000 for mainnet
       "passphrase" : "",    // <-- Passphrase of faucet account
       "address" : ""        // <-- Address of faucet account
   }
