@@ -1,4 +1,4 @@
-# Lisk Faucet
+# Shift Faucet
 
 ## Prerequisites
 
