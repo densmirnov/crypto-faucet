@@ -1,10 +1,10 @@
 {
-  "name": "lisk-faucet",
+  "name": "shift-faucet",
   "version": "1.0.0",
-  "description": "Lisk faucet application",
+  "description": "Shift faucet application",
   "repository": {
     "type": "git",
-    "url": "git@github.com:LiskHQ/lisk-faucet.git"
+    "url": "https://github.com/densmirnov/shift-faucet.git"
   },
   "private": true,
   "author": "Boris Povod <boris@crypti.me>, Max Kordek <max@lisk.io>",
@@ -19,7 +19,7 @@
     "moment": "^2.8.3",
     "redis": "^0.12.1",
     "request": "^2.42.0",
-    "simple-recaptcha": "git+ssh://git@github.com:wzrdtales/simple-recaptcha.git",
+    "simple-recaptcha": "https://github.com/wzrdtales/simple-recaptcha.git",
     "underscore": "^1.7.0"
   }
 }

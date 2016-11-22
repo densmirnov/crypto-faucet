@@ -34,10 +34,10 @@ Open `config.json` and complete the following details.
 
   **NOTE:** There are two separate keypairs for development and production environments.
 
-2. Edit your Lisk connection details:
+2. Edit your Shift connection details:
 
   ```js
-  "lisk" : {
+  "Shift" : {
       "host" : "127.0.0.1", // <-- Server IP/hostname
       "port" : 7000,        // <-- 7000 for testnet, 8000 for mainnet
       "passphrase" : "",    // <-- Passphrase of faucet account
@@ -82,14 +82,14 @@ Open: [http://localhost:6000](http://localhost:6000)
 ## Authors
 
 - Boris Povod <boris@crypti.me>
-- Oliver Beddows <oliver@lisk.io>
-- Max Kordek <max@lisk.io>
+- Oliver Beddows <oliver@Shift.io>
+- Max Kordek <max@Shift.io>
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Lisk  
+Copyright (c) 2016 Shift  
 Copyright (c) 2014-2015 Crypti
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

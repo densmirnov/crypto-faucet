@@ -1,5 +1,5 @@
-var lisk = require('./lisk.js');
+var shift = require('./shift.js');
 
 module.exports = function (app) {
-    lisk(app);
+    shift(app);
 }

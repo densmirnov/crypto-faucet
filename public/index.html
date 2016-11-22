@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html ng-app="faucet" class="ng-scope">
-    <head>
-        <style type="text/css">
-            @charset "UTF-8";
-            [ng\:cloak],
-            [ng-cloak],
-            [data-ng-cloak],
-            [x-ng-cloak],
-            .ng-cloak,
-            .x-ng-cloak,
-            .ng-hide {
-                display: none !important;
-            }
-            ng\:form {
-                display: block;
-            }
-            .ng-animate-block-transitions {
-                transition: 0s all!important;
-                -webkit-transition: 0s all!important;
-            }
-            .ng-hide-add-active,
-            .ng-hide-remove {
-                display: block!important;
-            }
-        </style>
-        <title>Lisk - Faucet</title>
 
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="application-name" content="Lisk.io - Faucet"/>
-        <meta name="msapplication-TileColor" content="#F3F3E1" />
-        <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
-        <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
-        <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
-        <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
-        <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
-        <link rel="icon" type="image/png" href="/img/favicon-196x196.png" sizes="196x196" />
-        <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
+<head>
+    <style type="text/css">
+    @charset "UTF-8";
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide {
+        display: none !important;
+    }
 
-        <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
-        <link rel="stylesheet" type="text/css" href="/css/app.css">
+    ng\:form {
+        display: block;
+    }
 
-        <script src="https://www.google.com/recaptcha/api.js?onload=vcRecapthaApiLoaded&render=explicit" async defer></script>
-        <script type="text/javascript" src="/lib/angular.min.js"></script>
-        <script type="text/javascript" src="/lib/recaptcha.min.js"></script>
-        <script type="text/javascript" src="/lib/effects.min.js"></script>
-        <script type="text/javascript" src="/js/app.js"></script>
-    </head>
-    <body ng-controller="mainController">
-        <div class="main-block">
-            <div class="logotype-block">
-                <p><a href="https://lisk.io/"><img src="/img/logo.png" alt="Lisk"></a></p>
-            </div>
-            <div class="error fx-fade-down" ng-show="error">
-                <p><strong>Error:</strong> {{error}}</p>
-            </div>
-            <div class="txId fx-fade-down" ng-show="txId">
-                <p><strong>{{amount}} LSK sent, Transaction ID: </strong>{{txId}}</p>
-            </div>
-            <!-- <div class="available-block">
-            <h5>AVAILABLE : {{available || 0}} LSK</h5>
-            </div> -->
-            <div class="testnet-notice" ng-if="network == 'testnet'">
-              <p>This faucet is currently running on a testnet.<br>All payouts are for testing purposes only.</p>
-            </div>
-            <div class="send-form">
-                <form class="form">
-                    <input type="text" ng-model="address" class="input" placeholder="Please enter your Lisk address to receive {{amount || 0}} LSK for free">
-                    <p class="msg">Don't have a Lisk address? Use our <a href="https://login.lisk.io/" target="_blank">web client</a> to create one!</p>
-                    <br>
-                    <div vc-recaptcha ng-model="captcha" lang="en" class="g-recaptcha" key="'6LfasxYTAAAAAIzcsWR1BV73esj_HUQvM9TI1uQP'"></div>
-                    <br>
-                    <input type="submit" class="button" value="Receive my free LSK" ng-click="send()">
-                </form>
-            </div>
+    .ng-animate-block-transitions {
+        transition: 0s all!important;
+        -webkit-transition: 0s all!important;
+    }
+
+    .ng-hide-add-active,
+    .ng-hide-remove {
+        display: block!important;
+    }
+    </style>
+    <title>Shift - Faucet</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="application-name" content="Shift - Faucet" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/img/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
+    <link rel="stylesheet" type="text/css" href="/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <script src="https://www.google.com/recaptcha/api.js?onload=vcRecapthaApiLoaded&render=explicit" async defer></script>
+    <script type="text/javascript" src="/lib/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/recaptcha.min.js"></script>
+    <script type="text/javascript" src="/lib/effects.min.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+</head>
+
+<body ng-controller="mainController">
+    <div class="main-block">
+        <div class="logotype-block">
+            <p>
+                <a href="https://shift.io/"><img src="/img/logo.png" alt="Shift"></a>
+            </p>
         </div>
-        <div class="footer">Faucet address:
-            <a href="https://explorer.lisk.io/address/{{donation_address}}" target="_blank">{{donation_address || 'Unavailable'}}</a>
+        <div class="error fx-fade-down" ng-show="error">
+            <p><strong>Error:</strong> {{error}}</p>
         </div>
-    </body>
+        <div class="txId fx-fade-down" ng-show="txId">
+            <p><strong>{{amount}} SHIFT sent, Transaction ID: </strong>{{txId}}</p>
+        </div>
+        <div class="available-block">
+            <h5>AVAILABLE : {{available || 0}} SHIFT</h5>
+        </div>
+        <!-- <div class="testnet-notice" ng-if="network == 'testnet'">
+            <p>This faucet is currently running on a testnet.
+                <br>All payouts are for testing purposes only.</p>
+        </div> -->
+        <div class="send-form">
+            <form class="form">
+                <input type="text" ng-model="address" class="input" placeholder="Please enter your Shift address to receive {{amount || 0}} SHIFT for free">
+                <p class="msg">Don't have a Shift address? Use our <a href="https://node.shiftnrg.online/" target="_blank">web client</a> to create one!</p>
+                <br>
+                <div vc-recaptcha ng-model="captcha" lang="en" class="g-recaptcha" key="'6Lf28B8TAAAAAF7oppGtBH1-Rx7fy0Qwqy7HjDOa'"></div>
+                <br>
+                <input type="submit" class="button" value="Receive my free SHIFT" ng-click="send()">
+            </form>
+        </div>
+    </div>
+    <div class="footer">Faucet address:
+        <a href="https://explorer.shift.io/address/{{donation_address}}" target="_blank">{{donation_address || 'Unavailable'}}</a>
+    </div>
+</body>
+
 </html>

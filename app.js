@@ -18,21 +18,21 @@ client.debug_mode = true;
 
 app.configure(function () {
     app.set('strict routing', true);
-    app.set("lisk address", "http://" + config.lisk.host + ":" + config.lisk.port);
+    app.set("shift address", "http://" + config.shift.host + ":" + config.shift.port);
 
-    if (config.lisk.port == 8000) {
-        app.set("lisk network", 'mainnet');
+    if (config.shift.port == 8000) {
+        app.set("shift network", 'mainnet');
     } else {
-        app.set("lisk network", 'testnet');
+        app.set("shift network", 'testnet');
     }
 
-    app.locals.passphrase = config.lisk.passphrase;
-    app.locals.address = config.lisk.address;
+    app.locals.passphrase = config.shift.passphrase;
+    app.locals.address = config.shift.address;
     app.locals.amountToSend = config.amount;
     app.locals.cacheTTL = config.cacheTTL;
 
     app.use(function (req, res, next) {
-        req.lisk = app.get("lisk address");
+        req.shift = app.get("shift address");
         return next();
     });
 
