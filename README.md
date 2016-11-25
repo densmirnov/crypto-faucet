@@ -1,5 +1,9 @@
 # Shift Faucet
 
+![](https://densmirnov.com/img/shift_faucet.png)
+
+---
+
 ## Prerequisites
 
 - Node.js + npm (https://github.com/nodesource/distributions)
