@@ -6,13 +6,17 @@ body {
 }
 
 body {
-    background: #162835;
+    background: #000;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     letter-spacing: 1.6px;
+    background-image: url('../img/bg_00.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .stars {
@@ -23,7 +27,7 @@ body {
     height: 106px;
     margin: 0 auto;
     background-image: url('../img/stars.png');
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
 }
 
@@ -33,15 +37,15 @@ body {
     width: 100%;
     height: 240px;
     bottom: 0;
-    background-image: url('../img/bg_01.jpg');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    // background-image: url('../img/bg_01.jpg');
+    // background-position: center bottom;
+    // background-repeat: no-repeat;
+    // background-size: contain;
 }
 
 a {
     text-decoration: none;
-    color: #29BFCA;
+    color: #C90102;
 }
 
 a:active,
@@ -52,28 +56,30 @@ a:hover {
 
 a:visited {
     text-decoration: none;
-    color: #29BFCA;
+    color: #C90102;
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 16px;
     margin: 0;
     margin-bottom: -16px;
     letter-spacing: 1.6px;
     font-size: 36px;
     color: #fff;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
 }
 
 h5 {
     display: block;
     margin: 0;
     font-size: 14px;
-    color: #ffffff;
+    color: #fff;
     position: relative;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 32px;
     letter-spacing: 0.6px;
 }
@@ -83,7 +89,7 @@ h5 {
     font-size: 10px;
     color: #dcd6cf;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .main-block {
@@ -91,8 +97,8 @@ h5 {
     width: 384px;
     margin: 0 auto;
     position: relative;
-    top: 25%;
-    transform: translateY(-25%);
+    top: 20%;
+    transform: translateY(-20%);
 }
 
 .main-block .logotype-block {
@@ -127,12 +133,19 @@ h5 {
     border-bottom: 1px solid #dcd6cf;
     display: block;
     width: 100%;
+    // text-transform: uppercase;
     background: none;
-    color: #96499C;
-    font-size: 22px;
+    color: #fff;
+    font-size: 14px;
     text-align: center;
-    font-family: 'Share Tech Mono', monospace;
-    letter-spacing: 3.2px;
+    font-family: 'Montserrat', monospace;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .input:active,
@@ -142,17 +155,17 @@ h5 {
 
 ::-webkit-input-placeholder {
     color: #2E3A46;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
     letter-spacing: 0.8px;
 }
 
 ::-moz-placeholder {
     color: #2E3A46;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.8px;
 }
 
@@ -161,9 +174,9 @@ h5 {
 
 :-moz-placeholder {
     color: #2E3A46;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.8px;
 }
 
@@ -172,9 +185,9 @@ h5 {
 
 :-ms-input-placeholder {
     color: #2E3A46;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.8px;
 }
 
@@ -183,20 +196,24 @@ h5 {
     line-height: 1;
     text-transform: uppercase;
     padding: 16px 42px;
-    border: 2px solid #20b2b5;
+    // border: 2px solid #20b2b5;
+    border: none;
     margin-top: 16px;
     cursor: pointer;
     width: 100%;
     height: 52px;
     text-align: center;
+    letter-spacing: 2.4px;
     font-size: 16px;
-    color: #20b2b5;
-    background: none;
+    font-weight: 700;
+    color: #fff;
+    // background: none;
+    background: #C90102;
 }
 
 .button:hover {
-    background: #20b2b5;
-    color: #fff;
+    background: #9D9D9D;
+    color: #686866;
 }
 
 .transactions-list {
@@ -235,7 +252,7 @@ h5 {
     color: #fff;
     display: block;
     position: absolute;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     width: 100%;
     // margin-top: 32px;

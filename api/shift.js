@@ -66,16 +66,16 @@ module.exports = function (app) {
 
         if (!captcha_response) { error = "Captcha validation failed, please try again"; }
 
-        if (address) {
-            address = address.trim();
+        // if (address) {
+            // address = address.trim();
 
-            if (address.indexOf('S') != address.length - 1 && address.indexOf('D') != address.length - 1) {
-                error = "Invalid shift address";
-            }
+            // if (address.indexOf('') != address.length - 1 && address.indexOf('') != address.length - 1) {
+                // error = "Invalid shift address";
+            // }
 
-            var num = address.substring(0, address.length - 1);
-            if (isNaN(num)) { error = "Invalid shift address"; }
-        }
+            // var num = address.substring(0, address.length - 1);
+            // if (isNaN(num)) { error = "Invalid shift address"; }
+        // }
 
         if (error) {
             return res.json({ success : false, error : error });
